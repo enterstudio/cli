@@ -1,7 +1,16 @@
 Package: heroku
 Version: VERSION
+Replaces: heroku-toolbelt (<< 5.0-1~)
 Section: main
 Priority: standard
 Architecture: ARCHITECTURE
 Maintainer: Heroku
 Description: Client library and CLI to deploy apps on Heroku.
+
+Package: heroku-toolbelt
+Depends: heroku
+Architecture: all
+Priority: extra
+Section: oldlibs
+Description: transitional package
+  This package was renamed to "heroku". It can safely be removed.
