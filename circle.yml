@@ -27,7 +27,8 @@ dependencies:
   override:
     - >
       go version &&
-      if ! type gometalinter >/dev/null 2>&1; then go get -v github.com/alecthomas/gometalinter && gometalinter --install; fi &&
+      go get -v github.com/alecthomas/gometalinter && 
+      gometalinter --install &&
       if [ ! -d ~/osslsigncode ]; then
         wget https://cli-assets.heroku.com/osslsigncode-1.7.1.tar.gz &&
         tar -xvzf osslsigncode-1.7.1.tar.gz &&
