@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:tunnel-agent:20170305':
+    - heroku-status > heroku-cli-util > tunnel-agent:
+        patched: '2018-09-25T23:33:17.652Z'
+    - heroku-status > heroku-cli-util > heroku-client > tunnel-agent:
+        patched: '2018-09-25T23:33:17.652Z'
